@@ -1,7 +1,8 @@
 # Comparative 3D CFD Analysis of a LEGO Formula 1 Car
 
 **Author:** Timothy Owen Chandra
-**Tools:** Siemens Designcenter (formerly NX) Student Edition • ANSYS SpaceClaim Student • ANSYS Fluent & CFD-Post Student
+
+**Tools:** Siemens Designcenter (formerly NX) Student Edition • ANSYS Student
 
 ---
 
