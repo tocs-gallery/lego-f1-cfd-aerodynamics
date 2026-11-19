@@ -6,9 +6,9 @@
 ---
 
 ## 1. Project Overview
-This project evaluates the aerodynamic performance of a reverse-engineered **LEGO Speed Champions 2023 McLaren Formula 1** car (`~19 cm` model length) using steady-state 3D Reynolds-Averaged Navier–Stokes (**RANS**) simulations in **ANSYS Fluent**. Specifically, the study compares the stock LEGO rear wing (**Simplified Baseline**) against a modified rear wing featuring an **inverted Selig S1223 airfoil (`5° AoA`)**.
+This project evaluates the aerodynamic performance of a reverse-engineered **LEGO Speed Champions 2023 McLaren Formula 1** car (`~19 cm` model length) using steady-state 3D Reynolds-Averaged Navier–Stokes (**RANS**) simulations in **ANSYS Fluent**. Specifically, the study compares the stock LEGO rear wing (**Simplified Baseline**) against a modified rear wing featuring an **inverted Selig S1223 airfoil (`20 mm chord`, `5° AoA`)**.
 
-* **Aerodynamic Rationale:** At LEGO Speed Champions scale and a `30 m/s` freestream velocity, the rear wing operates in a low-Reynolds-number regime (`Re ≈ 4.2 × 10⁴` based on wing chord. The high-camber **Selig S1223** profile is specifically designed to maintain high lift-to-drag efficiency in low-Reynolds-number flows.
+* **Aerodynamic Rationale:** At LEGO Speed Champions scale and a `30 m/s` freestream velocity (air kinematic viscosity `ν = 1.46 × 10⁻⁵ m²/s`), the rear wing operates in a low-Reynolds-number regime (`Re ≈ 4.1 × 10⁴` based on `20 mm` wing chord). The high-camber **Selig S1223** profile is specifically designed to maintain high lift-to-drag efficiency in low-Reynolds-number flows.
 * **Visual Presentation:** See [`LEGO_F1_CFD.pdf`](./LEGO_F1_CFD.pdf) in this repository for the 6-slide visual walkthrough of the CAD assembly, mesh refinement, and flow-field contours.
 
 ---
@@ -21,7 +21,7 @@ Navigating Student edition software constraints required dedicated CAD-to-CFD pr
 * Removed components (mirrors, halo, suspension arms, surface studs,etc.) and manually sealed all gaps to ensure a watertight geometry prior to export.
 2. **STL-to-Solid Conversion & Trailing-Edge Treatment (ANSYS SpaceClaim):**
 * Because neutral CAD export in the Student license is restricted to faceted `.stl` files rather than `.step` solids, the watertight `.stl` was converted back into a usable solid body via **Shrinkwrap**.
-* Modeled the replacement inverted **Selig S1223 (`5° AoA`)** rear wing and blunted its trailing edge to prevent boundary-layer prism collapse.
+* Modeled the replacement inverted **Selig S1223 (`20 mm chord`, `5° AoA`)** rear wing and blunted its trailing edge to prevent boundary-layer prism collapse.
 3. **Constrained Mesh Generation (ANSYS Meshing):**
 * Built a half-car symmetry domain with local refinement box, `0.5 mm` tire-to-ground Pinch controls, and `3-layer` boundary-layer inflation while staying strictly under the **1,048,576-element** ANSYS Student cap:
 * **Simplified Baseline Mesh:** `898,000` elements (`0.31` avg. skewness, '0.68' avg. orthogonal quality)
