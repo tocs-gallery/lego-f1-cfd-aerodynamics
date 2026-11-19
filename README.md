@@ -8,7 +8,7 @@
 ## 1. Project Overview
 This project evaluates the aerodynamic performance of a reverse-engineered **LEGO Speed Champions 2023 McLaren Formula 1** car (`~19 cm` model length) using steady-state 3D Reynolds-Averaged Navier–Stokes (**RANS**) simulations in **ANSYS Fluent**. Specifically, the study compares the stock LEGO rear wing (**Simplified Baseline**) against a modified rear wing featuring an **inverted Selig S1223 airfoil (`20 mm chord`, `5° AoA`)**.
 
-* **Aerodynamic Rationale:** At LEGO Speed Champions scale and a `30 m/s` freestream velocity (air kinematic viscosity `ν = 1.46 × 10⁻⁵ m²/s`), the rear wing operates in a low-Reynolds-number regime (`Re ≈ 4.1 × 10⁴` based on `20 mm` wing chord). The high-camber **Selig S1223** profile is specifically designed to maintain high lift-to-drag efficiency in low-Reynolds-number flows.
+* **Aerodynamic Rationale:** At LEGO Speed Champions scale and a `30 m/s` freestream velocity (air kinematic viscosity `𝝂 = 1.46 × 10⁻⁵ m²/s`), the rear wing operates in a low-Reynolds-number regime (`Re ≈ 4.1 × 10⁴` based on `20 mm` wing chord). The high-camber **Selig S1223** profile is specifically designed to maintain high lift-to-drag efficiency in low-Reynolds-number flows.
 * **Visual Presentation:** See [`LEGO_F1_CFD.pdf`](./LEGO_F1_CFD.pdf) in this repository for the 6-slide visual walkthrough of the CAD assembly, mesh refinement, and flow-field contours.
 
 ---
